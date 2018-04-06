@@ -6,7 +6,7 @@ LABEL version=1.0
 
 ## Install Terraform
 ENV TERRAFORM_VERSION=0.11.5
-ENV TERRAFORM_SHA256SUM=f991039e3822f10d6e05eabf77c9f31f3831149b52ed030775b6ec5195380999
+ENV TERRAFORM_SHA256SUM=131c440263382c79c7f783b70ff35cd1d03eb31c44f7738d153d95a0b8436ac9
 
 RUN apk add --update git curl openssh && \
     curl https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip > terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
@@ -17,7 +17,7 @@ RUN apk add --update git curl openssh && \
 
 ## Install Packer
 ENV PACKER_VERSION=1.2.2
-ENV PACKER_SHA256SUM=d1b0fcc4e66dfe4919c25752d028a4e4466921bf0e3f75be3bbf1c85082e8040
+ENV PACKER_SHA256SUM=6575f8357a03ecad7997151234b1b9f09c7a5cf91c194b23a461ee279d68c6a8
 
 RUN apk add --update git bash wget openssl
 
