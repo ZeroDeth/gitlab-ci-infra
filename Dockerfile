@@ -2,10 +2,10 @@ FROM alpine:latest
 MAINTAINER "Sherif Abdalla <sherif@bossastudios.com>"
 
 LABEL name="devops"
-LABEL version=1.0
+LABEL version=1.5
 
 ## Install Terraform
-ENV TERRAFORM_VERSION=0.11.5
+ENV TERRAFORM_VERSION=0.11.10
 ENV TERRAFORM_SHA256SUM=131c440263382c79c7f783b70ff35cd1d03eb31c44f7738d153d95a0b8436ac9
 
 RUN apk add --update git curl openssh && \
@@ -16,7 +16,7 @@ RUN apk add --update git curl openssh && \
     rm -f terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 
 ## Install Packer
-ENV PACKER_VERSION=1.2.2
+ENV PACKER_VERSION=1.3.1
 ENV PACKER_SHA256SUM=6575f8357a03ecad7997151234b1b9f09c7a5cf91c194b23a461ee279d68c6a8
 
 RUN apk add --update git bash wget openssl
@@ -30,7 +30,7 @@ RUN unzip packer_${PACKER_VERSION}_linux_amd64.zip -d /bin
 RUN rm -f packer_${PACKER_VERSION}_linux_amd64.zip
 
 ## Install AWS CLI
-ENV CLI_VERSION=1.14.69
+ENV CLI_VERSION=1.16.41
 
 RUN mkdir -p /aws && \
     apk -Uuv add groff jq less python py-pip && \
