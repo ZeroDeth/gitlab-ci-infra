@@ -1,5 +1,5 @@
 # gitlab-ci-infra
-DevOps image with Terraform, Packer, and AWS CLI for use n Gitlab CI/CD builds
+DevOps image with Terraform, Packer, and AWS CLI for use in Gitlab CI/CD builds
 
 ## Example
 
